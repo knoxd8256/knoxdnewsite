@@ -1,0 +1,115 @@
+/* CSS Document */
+body{
+	margin: 0;
+	padding: 0;
+	background-attachment: fixed;
+	background-origin: border-box;
+	background-size: cover;
+	display: grid;
+}
+header {
+	padding: 0;
+	margin: 0;
+	background-color: white;
+	border-bottom: solid 2px limegreen;
+	text-align: center;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+nav {
+	border-bottom: solid 2px limegreen;
+	width:100%;
+	margin:0;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;background-color: white;
+}
+nav a {
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	flex:1;
+	min-width: 5em;
+	display: block;
+	padding-top: .4em;
+	padding-bottom: .5em;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 1.5em;
+}
+nav a:hover, .currpage {
+	color: limegreen;
+}
+nav a::before {
+	background-color: limegreen;
+	content: ' ';
+	height: .1em;
+	width: 60%;
+	margin-left:20%;
+	display: block;
+	border-radius: 10px;
+	transform: scalex(0);
+	opacity: 0;
+	transition: 100ms;
+	margin-bottom: .2em;
+}
+nav a:hover::before, nav a.currpage::before {
+	transition:150ms;
+	opacity: 1;
+	transform: scalex(1);
+}
+iframe {
+	width: 40%;
+	margin-left:30%;
+	margin-top: 1em;
+}
+article {
+	width:80%;
+	margin-top: 1em;
+	margin-left: 5%;
+	padding:5%;
+	background-color:rgba(220,251,210,0.9);
+	border-radius: 1em;
+	margin-bottom: 2em;
+}
+footer {
+	width: 100%;
+	text-align: center;
+	background-color: lightgreen;
+	position:sticky;
+	margin:0;
+	bottom:0;
+	padding:0;
+}
+footer p {
+	position: relative;
+	width:100%;
+}
+p {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+article h1{
+	font-family: "Dancing Script", cursive;
+	font-size: 30pt;
+	margin: 0;
+	text-align: center;
+}
+article h2 {
+	font-family: "Fredericka the Great";
+	font-weight: 400;
+	text-align: center;
+}
+article h3 {
+	text-align: center;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+.map {
+	width:80%;
+	margin-left:10%;
+	border: solid 1px darkgreen;
+	height: 20em;
+	margin-bottom: 2em;
+	
+}
+hr {
+	background-color:limegreen;
+	border-color:limegreen;
+}

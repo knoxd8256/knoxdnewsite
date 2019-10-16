@@ -1,0 +1,138 @@
+/* CSS Document */
+body {
+	background-color: rgba(36,36,36,1.00);
+	background-image: url("../images/background.jpg");
+	background-repeat: repeat;
+}
+.bodyHeader {
+	margin-top: 30pt;
+	width: 100%;
+}
+h1 {
+	text-align: center;
+	color: antiquewhite;
+	letter-spacing: 2pt;
+	font-weight: 200;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+h2 {
+	text-align: center;
+	color: antiquewhite;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-weight: 100;
+}
+header img {
+	display: block;
+	float: left;
+}
+header div {
+}
+header div h1 {
+	margin-top: 1.5em;
+	text-shadow: 0px 0px 30px antiquewhite, 10px 10px 4px black;
+}
+/* nav styling */
+header {
+	grid-row: 1 / span 1;
+	display: grid;
+	grid-template-rows: 60% 30% 10%;
+	width: 80%;
+	height: 300px;
+	margin-left: 10%;
+}
+nav {
+	grid-row: 3 / span 1;
+}
+nav a {
+	/* Layout */
+	text-align: center;
+	width: 100%;
+	padding-top: .25em;
+	padding-bottom: .25em;
+	/* Font & Color */
+	border-radius: 5px;
+	border: 1px black solid;
+	text-decoration: none;
+	color: black;
+	background-color: darkred;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	font-size: 14pt;
+}
+nav a:hover {
+	background-color:lightcoral;
+	color: darkred;
+}
+nav ul {
+	grid-row: 3 / span 1;
+	column-count: 4;
+	list-style-type: none;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 1em;
+	align-content: center;
+}
+nav li {
+	display: flex;
+
+}
+div.headerWrapper{
+	margin-top: 10px;
+	border: antiquewhite dotted 4px;
+	box-shadow: 0px 0px 30px 5px antiquewhite;
+	height: 100%;
+	grid-row: 1 / span 1;
+	background: url("../images/original-header.png");
+	background-color: black;
+	background-size: contain;
+	background-repeat:no-repeat;
+	background-attachment: local;
+	background-position: center;
+}
+/* nav styling end */
+/* gallery styling */
+figure {
+	width: 276px;
+	border: double red 3px;
+	height: 480px;
+	background-color: black;
+}
+figcaption {
+	color: antiquewhite;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	text-align: center;
+}
+figure img {
+	margin-top: 10px;
+	margin-left: 13px;
+	width: 250px;
+	height: 350px;
+}
+/* gellery styling end*/
+/* about page styling */
+.asideLeft {
+	margin-top: 20px;
+	margin-left: 5%;
+	float: left;
+	width: 55%;
+	line-height: 1.5;
+}
+.asideLeft hr {
+	height: 0px;
+	background-color: antiquewhite;
+	margin-top: 30px;
+}
+.asideLeft p {
+	padding: 8px;
+	color: antiquewhite;
+	font-family: "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+
+.mapRight {
+	margin-top: 70px;
+	width: 30%;
+	height: 350px;
+	float: right;
+	margin-right: 5%;
+	margin-bottom: 30px;
+}
