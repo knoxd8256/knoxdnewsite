@@ -32,7 +32,7 @@ nav a {
 	display: block;
 	padding-top: .4em;
 	padding-bottom: .5em;
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-family: "Quicksand", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	font-size: 1.5em;
 }
 nav a:hover, .currpage {
@@ -74,7 +74,7 @@ footer {
 	width: 100%;
 	text-align: center;
 	background-color: lightgreen;
-	position:sticky;
+	position:fixed;
 	margin:0;
 	bottom:0;
 	padding:0;
@@ -107,9 +107,55 @@ article h3 {
 	border: solid 1px darkgreen;
 	height: 20em;
 	margin-bottom: 2em;
-	
+	object-fit: cover;
+
 }
 hr {
 	background-color:limegreen;
 	border-color:limegreen;
+}
+
+.headimg {
+	margin: 1em 10%;
+	width: 80%;
+	height: min-content;
+}
+.headimg figcaption {
+	font-size: 150%;
+	text-align: center;
+	font-family: Constantia,
+	"Lucida Bright",
+	"DejaVu Serif",
+	Georgia,
+	"serif";
+
+}
+.headimg img {
+	margin-left: 10%;
+	width: 80%;
+	max-width: 600px;
+}
+
+@media (max-width: 500px) {
+	.headimg img {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.headimg {
+		width: 94%;
+		margin: 2rem 3%;
+	}
+}
+
+@media (min-width: 1150px) {
+	.headimg {
+		width: 600px;
+		float: left;
+	}
+	.headimg img {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
 }
