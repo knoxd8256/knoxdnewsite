@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>About</title>
+</head>
+<body>
+    <header>
+        <img class="icon" src="img/icon.svg" alt="Dnd">
+        <h1>CharQuest</h1>
+    </header>
+    <button class="navi" onclick="buttAct()"><span></span></button>
+    <nav id="navibar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="classes.html">Classes</a>
+        <a href="abilities.html">Scores</a>
+        <a href="flavor.html">Flavor Text</a>
+        <a href="equipment.html">Equipment</a>
+    </nav>
+    <main class="tilemain">
+        <figure class="figurehead">
+            <img src="img/skull.jpg" alt="About">
+            <figcaption>About</figcaption>
+        </figure>
+        <article>
+            <h2>About the Site</h2>
+            <p> 
+                This site is the answer to what every new player asks: What does any of this actually <em>mean?</em>
+                Dungeons and Dragons is more user-friendly than every with the advent of Fifth Edition, but at the 
+                end of the day there are a lot of terms and basics which experienced players and dungeon masters take for granted.
+                This site aims to answer all of the above in a friendly, understandable fashion.
+            </p>
+        </article>
+        <article>
+            <h2>About the Author</h2>
+            <p>
+                I'm a student, a web designer, a D&D player, and a Dungeon Master. I've been playing D&D for as long as I
+                can remember, and have played every edition except for 3.5 (because sometimes self-care is opting out
+                of a broken system). I built this site over a couple of months, with several complete teardowns and rebuilds.
+                My hope is that it will serve as a useful resource in the future.
+            </p>
+        </article>
+    </main>
+</body>
+<script>
+    const navi = document.getElementById('navibar');
+
+    function buttAct() {
+        navi.classList.toggle('show');
+        event.target.classList.toggle('show');
+    }
+</script>
+</html>

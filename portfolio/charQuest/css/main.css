@@ -1,0 +1,250 @@
+html, body {
+    font-family: william-caslon-text, Georgia, 'Times New Roman', Times, serif;
+    background-color: #236;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: block;
+    width: 100%;
+    height: min-content;
+    background-color: white;
+    background-clip: border-box;
+    border-top: double black 8px;
+    border-bottom: double black 8px;
+    margin: 2rem 0;
+}
+header img {
+    display: inline-block;
+    height: 6rem;
+}
+header h1 {
+    font-size: 250%;
+    font-family: amador, william-caslon-text, Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    right: 2rem;
+    line-height: 6rem;
+    text-align: right;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.smalnav {
+    position: relative;
+    width: 92%;
+    margin-left: 4%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.smalnav a {
+    background-color: white;
+    font-size: 150%;
+    display: inline-block;
+    flex: .4;
+    line-height: 200%;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border: double black 3px;
+}
+
+.biglink img {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.biglink figure {
+    position: relative;
+    background-color: white;
+    height: 20rem;
+    overflow: hidden;
+    transition: filter .2s ease-in 0s;
+}
+
+.biglink figure:hover {
+    filter: sepia(80%);
+}
+
+a.biglink {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    height: min-content;
+    width: 90vw;
+}
+
+.biglink figcaption {
+    color: white;
+    text-shadow: .2em .2em .2em black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 2%;
+    text-align: right;
+    line-height: 200%;
+    width: 98%;
+    background-color: rgba(14, 14, 40, .9);
+}
+
+.tilemain {
+    width: 100%;
+    display: grid;
+}
+
+.tilemain article {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border: black double 4px;
+}
+
+nav#navibar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-top: double black 3px;
+    border-bottom: double black 3px;
+}
+
+nav#navibar a {
+    flex: 1;
+    padding: 1ch;
+    font-size: 120%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+button.navi {
+    bottom: 1em;
+    right: 1em;
+    width: 4em;
+    height: 4em;
+    position: fixed;
+    display: none;
+    z-index: 999;
+    margin: 0;
+    border: 2px solid black;
+    border-radius: 1em;
+    background-color: white;
+}
+
+span, span::before, span::after {
+    background-color: black;
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 10% 0;
+    content: ' ';
+    position: relative;
+}
+
+span::before {
+    bottom: 400%;
+}
+span::after {
+    top: 200%;
+}
+
+figure.figurehead {
+    position: relative;
+    margin: 1em;
+    min-height: 16rem;
+    overflow: hidden;
+    max-height: min-content;
+    background-color: rgba(10, 10, 20, .4);
+}
+
+.figurehead img {
+    width: 100%;
+    position: absolute;
+    top: -15rem;
+}
+
+.figurehead figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 96%;
+    padding: .6em 2%;
+    background-color: rgba(10, 10, 20, .4);
+    text-align: right;
+    color: white;
+    font-size: 120%;
+
+}
+@media(max-width: 860px) {
+    nav#navibar {
+        margin: 0;
+        z-index: 40;
+        display: grid;
+        bottom: -40em;
+        right: 1em;
+        position: fixed;
+        width: 15em;
+        transition: bottom 200ms ease-out 0ms;
+    }
+
+    .figurehead img {
+        top: 0;
+    }
+    nav#navibar.show {
+        bottom: 1em;
+    }
+
+    button.navi.show {
+        transform: rotate(90deg);
+    }
+
+    button.navi {
+        transform: none;
+        transition: transform 200ms ease-out 0ms;
+        display: block;
+    }
+}
+@media(min-width: 1000px) {
+    .tilemain {
+        grid-template-columns: 1fr 1fr;
+    }
+    .figurehead {
+        grid-column: span 2;
+    }
+}
+@media(min-width: 1600px) {
+    .tilemain {
+        grid-template-columns: 1fr 1fr;
+    }
+    .figurehead {
+        grid-column: 1 / span 1;
+        grid-row: span 2;
+
+    }
+    .figurehead img {
+        top: unset;
+        right: 0;
+        bottom: 0;
+        min-height: 100%;
+        width: auto;
+        min-width: 100%;
+    }
+    main.index {
+        margin-left: 1%;
+        display: grid;
+        width: 96%;
+        padding: 0;
+        gap: 2%;
+        grid-template-columns: 33% 32% 33%;
+    }
+    a.biglink {
+        width: 100%;
+    }
+    a.biglink figure{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+}
