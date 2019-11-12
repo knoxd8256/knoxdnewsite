@@ -190,8 +190,34 @@ ul {
     width: 4em;
 }
 
-.projLog:hover {
-    animation: flip 400ms linear 0s 1 forwards none;
+.portlist article:hover .projLog {
+    animation: flip 400ms linear 0s 1 both;
+}
+
+.portlist a {
+    text-decoration: none;
+    color: black;
+}
+
+.portlist article:hover a {
+    color: navy;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg)
+        translateY(0em);
+    }
+
+    50% {
+        transform: rotateY(180deg)
+        translateY(-1em);
+    }
+
+    100% {
+        transform: rotateY(360deg)
+        translateY(0em);
+    }
 }
 
 /* Portfolio END */
