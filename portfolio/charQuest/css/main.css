@@ -83,10 +83,17 @@ a.biglink {
     display: grid;
 }
 
+
+.tilemain article p {
+    max-width: 60ch;
+}
+
 .tilemain article, .index p {
     background-color: white;
     padding: 1em;
     margin: 1em;
+    display: grid;
+    justify-content: center;
     border: black double 4px;
 }
 
