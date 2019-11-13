@@ -15,7 +15,18 @@
         <img src="img/icon.svg" alt="Dragon Icon">
         <h1>CharQuest</h1>
     </header>
+    <button class="navi" onclick="buttAct()">Menu</button>
+    <nav id="navibar">
+        <a href="index.html">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="abilities.html">Scores</a>
+        <a href="flavor.html">Flavor Text</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
     <main class="index">
+        <p>Greetings, adventurer! The words within this site will grant you a glimpse into the wide range of character possibilities in 5th Edition D&D. Click or tap a thumbnail to embark upon your quest.</p>
         <a href="abilities.html" class="biglink"><figure>
             <img src="img/knight.jpg" alt="Ability Scores">
             <figcaption>Ability Scores</figcaption>
@@ -48,5 +59,13 @@
         </a>
     </main>
 </body>
+<script>
+    const navi = document.getElementById('navibar');
+
+    function buttAct() {
+        navi.classList.toggle('show');
+        event.target.classList.toggle('show');
+    }
+</script>
 
 </html>

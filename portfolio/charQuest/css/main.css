@@ -30,32 +30,22 @@ header h1 {
     margin: 0;
 }
 
-.smalnav {
-    position: relative;
-    width: 92%;
-    margin-left: 4%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.smalnav a {
-    background-color: white;
-    font-size: 150%;
-    display: inline-block;
-    flex: .4;
-    line-height: 200%;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    border: double black 3px;
+main.index {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 4em;
 }
 
 .biglink img {
+    position: absolute;
+    right: 0;
     min-height: 100%;
     min-width: 100%;
 }
 
 .biglink figure {
+    padding: 0;
+    margin: 1em;
     position: relative;
     background-color: white;
     height: 20rem;
@@ -72,7 +62,7 @@ a.biglink {
     text-decoration: none;
     color: black;
     height: min-content;
-    width: 90vw;
+    width: 100%;
 }
 
 .biglink figcaption {
@@ -93,11 +83,15 @@ a.biglink {
     display: grid;
 }
 
-.tilemain article {
+.tilemain article, .index p {
     background-color: white;
     padding: 1em;
     margin: 1em;
     border: black double 4px;
+}
+
+.index p {
+    grid-column: 1 / -1;
 }
 
 nav#navibar {
@@ -119,34 +113,22 @@ nav#navibar a {
 }
 
 button.navi {
-    bottom: 1em;
-    right: 1em;
-    width: 4em;
-    height: 4em;
+    bottom: .5em;
+    right: .5em;
+    width: 5em;
+    height: 5em;
     position: fixed;
     display: none;
     z-index: 999;
     margin: 0;
-    border: 2px solid black;
+    border: 2px black solid;
     border-radius: 1em;
-    background-color: white;
-}
-
-span, span::before, span::after {
-    background-color: black;
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin: 10% 0;
-    content: ' ';
-    position: relative;
-}
-
-span::before {
-    bottom: 400%;
-}
-span::after {
-    top: 200%;
+    background-color: #9BF;
+    background-image: url('../img/icon.svg');
+    background-clip: border-box;
+    background-size: contain;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
 }
 
 figure.figurehead {
@@ -178,6 +160,14 @@ figure.figurehead {
 
 }
 @media(max-width: 860px) {
+    .biglink img {
+        right: -20%;
+        min-width: 120%;
+    }
+
+    main.index {
+        grid-template-columns: 100%;
+    }
     nav#navibar {
         margin: 0;
         z-index: 40;
@@ -191,17 +181,19 @@ figure.figurehead {
 
     .figurehead img {
         top: 0;
+        min-width: 120%;
+        right: -10%;
     }
     nav#navibar.show {
         bottom: 1em;
     }
 
     button.navi.show {
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
     }
 
     button.navi {
-        transform: none;
+        transform: rotate(0deg);
         transition: transform 200ms ease-out 0ms;
         display: block;
     }
