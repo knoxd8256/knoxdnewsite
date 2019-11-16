@@ -1,138 +1,69 @@
-/* CSS Document */
+body, html {
+	padding: 0;
+	margin: 0;
+	color: #FFE;
+	font-size: 15pt;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 body {
-	background-color: rgba(36,36,36,1.00);
-	background-image: url("../images/background.jpg");
-	background-repeat: repeat;
+	background-color: #333;
+	background-image: url('../images/background.jpg');
 }
-.bodyHeader {
-	margin-top: 30pt;
-	width: 100%;
-}
-h1 {
-	text-align: center;
-	color: antiquewhite;
-	letter-spacing: 2pt;
-	font-weight: 200;
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-}
-h2 {
-	text-align: center;
-	color: antiquewhite;
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-	font-weight: 100;
-}
-header img {
-	display: block;
-	float: left;
-}
-header div {
-}
-header div h1 {
-	margin-top: 1.5em;
-	text-shadow: 0px 0px 30px antiquewhite, 10px 10px 4px black;
-}
-/* nav styling */
 header {
-	grid-row: 1 / span 1;
-	display: grid;
-	grid-template-rows: 60% 30% 10%;
-	width: 80%;
-	height: 300px;
-	margin-left: 10%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 nav {
-	grid-row: 3 / span 1;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 nav a {
-	/* Layout */
-	text-align: center;
-	width: 100%;
-	padding-top: .25em;
-	padding-bottom: .25em;
-	/* Font & Color */
-	border-radius: 5px;
-	border: 1px black solid;
+	flex: 1;
+	background-color: #141111;
+	line-height: 3em;
+	color: #FFE;
 	text-decoration: none;
-	color: black;
-	background-color: darkred;
-	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-	font-size: 14pt;
+	font-size: 100%;
+	text-align: center;
+	text-shadow: none;
+	transition: text-shadow 150ms ease-out;
 }
 nav a:hover {
-	background-color:lightcoral;
-	color: darkred;
+	text-shadow: #FFE 0 0 1em;
 }
-nav ul {
-	grid-row: 3 / span 1;
-	column-count: 4;
-	list-style-type: none;
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
-	margin-top: 1em;
-	align-content: center;
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	gap: 1em;
+	margin-bottom: 2em;
 }
-nav li {
+main h1, main h2 {
+	grid-column: 1 / -1;
+}
+article {
+	background-color: rgba(20, 20, 20, .6);
+	border-radius: 1em;
+	padding: 1em;
 	display: flex;
-
-}
-div.headerWrapper{
-	margin-top: 10px;
-	border: antiquewhite dotted 4px;
-	box-shadow: 0px 0px 30px 5px antiquewhite;
-	height: 100%;
-	grid-row: 1 / span 1;
-	background: url("../images/original-header.png");
-	background-color: black;
-	background-size: contain;
-	background-repeat:no-repeat;
-	background-attachment: local;
-	background-position: center;
-}
-/* nav styling end */
-/* gallery styling */
-figure {
-	width: 276px;
-	border: double red 3px;
-	height: 480px;
-	background-color: black;
+	flex-direction: column;
+	align-items: center;
 }
 figcaption {
-	color: antiquewhite;
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	margin-top: .2em;
+	font-size: 120%;
 	text-align: center;
 }
+article table {
+	background-color: rgba(200, 200, 200, .2);
+	border-radius: 1em;
+	padding: 1em;
+}
 figure img {
-	margin-top: 10px;
-	margin-left: 13px;
-	width: 250px;
-	height: 350px;
+	border: dotted 3px #DDA;
 }
-/* gellery styling end*/
-/* about page styling */
-.asideLeft {
-	margin-top: 20px;
-	margin-left: 5%;
-	float: left;
-	width: 55%;
-	line-height: 1.5;
-}
-.asideLeft hr {
-	height: 0px;
-	background-color: antiquewhite;
-	margin-top: 30px;
-}
-.asideLeft p {
-	padding: 8px;
-	color: antiquewhite;
-	font-family: "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-}
-
-.mapRight {
-	margin-top: 70px;
-	width: 30%;
-	height: 350px;
-	float: right;
-	margin-right: 5%;
-	margin-bottom: 30px;
+h1, h2 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
