@@ -33,7 +33,6 @@ header {
     height: min-content;
     background-color: #125;
     background-image: url('../img/code.png');
-    background-blend-mode: subtract;
     background-attachment: fixed;
     background-clip: border-box;
     background-repeat: no-repeat;

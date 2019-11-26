@@ -231,13 +231,12 @@ figure.figurehead {
     }
     .figurehead {
         grid-column: 1 / span 1;
-        grid-row: span 2;
+        grid-row: 1 / span 1;
 
     }
     .figurehead img {
-        top: unset;
+        top: 0;
         right: 0;
-        bottom: 0;
         min-height: 100%;
         width: auto;
         min-width: 100%;
