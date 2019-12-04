@@ -1,3 +1,6 @@
 [submodule "portfolio\\js-scripts"]
 	path = portfolio\\js-scripts
 	url = https://github.com/knoxd8256/js-scripts
+[submodule "portfolio/charQuest"]
+	path = portfolio/charQuest
+	url = https://github.com/knoxd8256/charQuest
