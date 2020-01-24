@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <header>
+    <header role="banner" aria-label="Page Banner">
         <figure id="splashpic">
             <img src="img/circleprof.png" alt="Picture of My Face">
             <figcaption>David Knox - Web Developer</figcaption>
         </figure>
     </header>
-    <main>
-        <section class="splash">
+    <main role="main" aria-label="Main Content">
+        <section aria-label="Intro" class="splash">
             <h2>Developer <br> Student <br> Designer</h2>
             <p>
                 I'm a student in Web Development capable in web development and design. I graduate in the spring of
@@ -26,9 +26,9 @@
                 structures, hosting, and cloud platforms. I'm based in North Carolina, and am
                 currently studying at Durham Tech.
             </p>
-        </section>
-        <section class="listsect">
-            <article>
+	</section>
+	<section aria-label="Languages, Skills, and Tools" class="listsect">
+	    <article>
                 <h2>Languages</h2>
                 <ul>
                     <li>HTML5</li>
@@ -59,10 +59,10 @@
                 </ul>
             </article>
         </section>
-        <section class="portlist">
+        <section aria-labelledby="portfolio" class="portlist">
             <h1 id="portfolio"> Portfolio </h1>
             <article>
-                <img src='img/GitHub-Mark-64px.png' class='projLog'>
+                <img src='img/GitHub-Mark-64px.png' alt="Github Logo" class='projLog'>
                 <a href='https://github.com/knoxd8256'>
                     <h3>GitHub</h3>
                 </a>
@@ -75,7 +75,7 @@
                 </p>
             </article>
             <article>
-                <img src='img/jtaLogo.svg' class='projLog'>
+                <img src='img/jtaLogo.svg' alt="John the Artist Logo" class='projLog'>
                 <a href='https://johntheartist.net'>
                     <h3>John the Artist</h3>
                 </a>
@@ -87,7 +87,7 @@
                 </p>
             </article>
             <article>
-                <img src='img/moSongLogo.svg' class='projLog'>
+                <img src='img/moSongLogo.svg' alt="Morning Song Logo" class='projLog'>
                 <a href='portfolio/nursery/index.html'>
                     <h3>Morningsong</h3>
                 </a>
@@ -100,7 +100,7 @@
                 </p>
             </article>
             <article>
-                <img src='img/charQuest.svg' class='projLog'>
+                <img src='img/charQuest.svg' alt="CharQuest Logo" class='projLog'>
                 <a href='portfolio/charQuest/index.html'><h3>CharQuest</h3></a>
                 <p>
                     This is a website I'm working on for my web
@@ -111,7 +111,7 @@
             </article>
         </section>
     </main>
-    <footer>
+    <footer role="contentinfo" aria-label="Footer">
         <p>
             &copy; David Knox 2019
             <a href="https://github.com/knoxd8256" target="_blank">Github</a>
